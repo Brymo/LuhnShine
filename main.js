@@ -32,6 +32,7 @@ function arrOf0To(num, currentIteration = 0, currentArray = []){
 }
 
 function addToDisplay(toDisplay){
+    console.log(toDisplay);
     const outputs = document.getElementById("outputs");
     const newDiv = document.createElement("div");
     newDiv.innerText = toDisplay;
@@ -81,7 +82,7 @@ function getFirstInvalidNumbersIndex(numArray, index=0){
 }
 
 function isFullyPopulated(numArray){
-    return !getFirstInvalidNumbersIndex(numArray);
+    return getFirstInvalidNumbersIndex(numArray) == null;
 }
 
 function isLuhnValid(numArray){
